@@ -1,0 +1,23 @@
+<mat-toolbar>
+    <span>COMP3133 Lab Test2/ 101238038 Yoonho Hwang</span>
+</mat-toolbar>
+<div class="container">
+    <h1>SpaceX Mission Launch List</h1>
+    <div style="margin-top:20px;">
+        <a (click) = "getDetails(data)" *ngFor="let data of missions">
+            <mat-card class="rocket-card">
+                <mat-card-header>
+                    <img mat-card-avatar src="{{data.links.mission_patch_small}}" />
+                    <mat-card-title>{{data.mission_name}}</mat-card-title>
+                    <mat-card-subtitle>{{data.launch_year}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>{{data.details}}</mat-card-content>
+                <app-missiondetails *ngIf = "isMission && currMission == data" 
+                [mission] = "data">
+                </app-missiondetails>
+            </mat-card>
+            <br>
+        </a>
+    </div>
+</div>
+    

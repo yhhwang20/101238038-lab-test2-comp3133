@@ -1,0 +1,13 @@
+mat-card-title {
+    color: brown;
+}
+.card-header{
+    margin-top: 10px;
+    padding-bottom: 15px;
+    color: black;
+    font-size: 30px;
+}
+.card-content{
+    background-color: #ffebee;
+    margin-top: 10px;
+}
